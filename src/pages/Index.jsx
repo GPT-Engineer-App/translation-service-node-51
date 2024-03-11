@@ -40,15 +40,24 @@ const Index = () => {
       <VStack spacing={6}>
         <Heading>Translation Service</Heading>
 
-        <FormControl id="language">
-          <FormLabel>Select Language</FormLabel>
-          <Select placeholder="Select language" onChange={handleLanguageChange}>
-            {/* These options would typically be fetched from your backend */}
-            <option value="en">English</option>
-            <option value="es">Spanish</option>
-            <option value="fr">French</option>
+        <FormControl id="translation-key">
+          <FormLabel>Select Translation Key</FormLabel>
+          <Select placeholder="Select translation key" onChange={handleKeyChange}>
+            {}
+            <option value="welcome_message">Welcome Message</option>
+            <option value="goodbye_message">Goodbye Message</option>
+            <option value="thank_you_message">Thank You Message</option>
           </Select>
         </FormControl>
+
+        {}
+        {}
+        <Box border="1px" borderColor="gray.200" p={4}>
+          <Heading size="md">Translations:</Heading>
+          <Text>English: "Welcome!"</Text>
+          <Text>Spanish: "¡Bienvenido!"</Text>
+          <Text>French: "Bienvenue!"</Text>
+        </Box>
 
         <FormControl id="translation-key">
           <FormLabel>Translation Key</FormLabel>
